@@ -38,9 +38,9 @@ $(document).ready(function () {
 
     //Générer le contenu du body
     $("#count").append(essai);
-    $("body").append("<input id='userInput' class='btn-primary'> </button>");
-    $("body").append("<button id='validate' class='btn-primary'>Valider</button>");
-    $("body").append("<button id='play' class='btn-primary'>Rejouer</button>");
+    $("#content").append("<input id='userInput' class='btn-primary'> </button>");
+    $("#content").append("<button id='validate' class='btn-primary'>Valider</button>");
+    $("#content").append("<button id='play' class='btn-primary'>Rejouer</button>");
     
     
     $('#play').hide();
@@ -86,36 +86,34 @@ $(document).ready(function () {
 
             if (i == 3 && input != random) {
                 console.log("perdu!");
-                $("body").append("<p class = 'message'>Ceybalotaperdu!, le chiffre à trouver était ... </p>");
-                $("body").append("<p id='answer'></p>");
-                $("#answer").append(random);
+                $("#content").append("<p class = 'message'>Ceybalotaperdu!, le chiffre à trouver était : " + random + "</p>");
                 $("#count").empty();
                 $("#count").append(essai);
 
             } else if (input == random) {
                 console.log("Et c'est! la win!");
-                $("body").append("<p class = 'message'>Et c'est! la win!</p>");
+                $("#content").append("<p class = 'message'>Et c'est! la win!</p>");
                 $("#count").empty();
                 $("#count").append(essai);
                 $('#play').show();
                 $('#validate').hide();
             } else if (input > random) {
                 console.log("Le chiffre à trouver est plus petit!");
-                $("body").append("<p class = 'message'>Le chiffre à trouver est plus petit!</p>");
+                $("#content").append("<p class = 'message'>Le chiffre à trouver est plus petit!</p>");
                 $("#count").empty();
                 $("#count").append(essai);
 
                 
             } else if (input < random) {
                 console.log("Le chiffre à trouver est plus grand!");
-                $("body").append("<p class = 'message'>Le chiffre à trouver est plus grand!</p>");
+                $("#content").append("<p class = 'message'>Le chiffre à trouver est plus grand!</p>");
                 $("#count").empty();
                 $("#count").append(essai);
             }
 
         } else {
             console.log("Essaie pas de me filouter, petit vilain va!");
-            $("body").append("<p class = 'message'>Essaie pas de me filouter, petit vilain va!</p>");
+            $("#content").append("<p class = 'message'>Essaie pas de me filouter, petit vilain va!</p>");
             $("#count").empty();
             $("#count").append(essai);
         }
