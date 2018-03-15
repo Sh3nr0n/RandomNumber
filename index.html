@@ -2,26 +2,23 @@
 <html lang="fr">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Find the random number</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
-    <div class="container flow-text" id="skillsLanguages">
-    <h4>Sauras-tu trouver le nombre mystère en trois essais?</h4>
-    <p>Entre un chiffre entre 0 et 10:</p>
-    <div class="center-align subSection">
+    <div class="container">
+        <h4>Sauras-tu trouver le nombre mystère en trois essais?</h4>
+        <p>Entre un chiffre entre 0 et 10:</p>
+        <div>
             <span>Essais restants = </span>
-            <span id="count" class="container center-align"></span>
+            <span id="count"></span>
             <div id="content"></div>
+        </div>
     </div>
-    </div>
-
-
-    
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="findRandomNumber.js"></script>
