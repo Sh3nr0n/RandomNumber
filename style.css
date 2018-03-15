@@ -1,10 +1,8 @@
-/* #menuNav{
-    width: 10%;
+.container {
+    background-color: #2196f3;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
 }
-
-#pageContent{
-    width: 80%;
-} */
 
 #previousButton{
     background-color: transparent;
